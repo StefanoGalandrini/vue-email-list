@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Boolzapp</title>
+	<title>Vue Email List</title>
 	<link rel="stylesheet" href="assets/style.css">
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
@@ -16,7 +16,10 @@
 	<main>
 		<!-- Vue mount point -->
 		<div id="container">
-
+			<button @click="getRandomEmail(10)">Genera 10 Email</button>
+			<ul v-for="email in emailArray">
+				<li>{{ email }}</li>
+			</ul>
 
 		</div>
 	</main>
