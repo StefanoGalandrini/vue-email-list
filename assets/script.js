@@ -10,17 +10,17 @@ const app = Vue.createApp({
 		getRandomEmail(n) {
 			this.emailArray.length = 0;
 			for (i = 0; i < n; i++) {
-				setTimeout(() => {
-					axios
-						.get(
-							"https://flynn.boolean.careers/exercises/api/random/mail",
-						)
-						.then((email) => {
-							this.randomEmail = email.data.response;
-							this.emailArray.push(this.randomEmail);
-						});
-				}, 100);
+				setTimeout(() => this.getEmail(), 100);
 			}
+		},
+
+		getEmail() {
+			axios
+				.get("https://flynn.boolean.careers/exercises/api/random/mail")
+				.then((email) => {
+					this.randomEmail = email.data.response;
+					this.emailArray.push(this.randomEmail);
+				});
 		},
 	},
 
