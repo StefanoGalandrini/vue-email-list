@@ -17,7 +17,7 @@
 		<!-- Vue mount point -->
 		<div id="container">
 			<button @click="getRandomEmail(10)">Genera 10 Email</button>
-			<ul v-for="email in emailArray">
+			<ul v-if="emailArray.length === 10" v-for="email in emailArray">
 				<li>{{ email }}</li>
 			</ul>
 

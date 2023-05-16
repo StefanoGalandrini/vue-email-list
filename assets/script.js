@@ -19,7 +19,7 @@ const app = Vue.createApp({
 							this.randomEmail = email.data.response;
 							this.emailArray.push(this.randomEmail);
 						});
-				}, 200);
+				}, 100);
 			}
 		},
 	},
