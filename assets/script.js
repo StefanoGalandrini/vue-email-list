@@ -20,6 +20,7 @@ const app = Vue.createApp({
 					});
 			}
 		},
+	},
 
 	created() {
 		axios
